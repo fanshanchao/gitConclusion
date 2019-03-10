@@ -16,3 +16,13 @@
 	git checkout --文件名  这个命令实际就是把本地仓库中最新的版本替换到工作区
 	git push -u origin master 添加master分支到远程仓库中区 第一次使用push加了-u以后 还会把本地的master分支和远程的master分支关联起来 这样在以后的推送或者拉取时就可以简化命令
 	git clone 用于向远程仓库克隆一个仓库
+	git reflog 查看命令历史 记录历史每一条记录
+	git reset hard-Commit的id  回退到某一版本
+	git checkout -b 分支名 创建并切换到这个分支
+	git branch查看分支
+	git branch <name> 创建分支
+	git checkout <name>切换分支
+	git merge <name> 合并name这个分支到当前分支 注意要是否有合并冲突
+	git branch -d <name>删除分支
+	git merge --no-ff -m"注释" <name> 合并某个分支 并且不会删除这个分支的信息
+	git log还可以用来看分支历史
