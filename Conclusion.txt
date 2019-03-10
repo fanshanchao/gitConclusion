@@ -26,3 +26,4 @@
 	git branch -d <name>删除分支
 	git merge --no-ff -m"注释" <name> 合并某个分支 并且不会删除这个分支的信息
 	git log还可以用来看分支历史
+	合并测试
