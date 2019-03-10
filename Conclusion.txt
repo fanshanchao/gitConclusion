@@ -26,4 +26,21 @@
 	git branch -d <name>删除分支
 	git merge --no-ff -m"注释" <name> 合并某个分支 并且不会删除这个分支的信息
 	git log还可以用来看分支历史
-	合并测试
+	git stash 把当前工作现场储藏起来，可以避免必须要提交才能去其他分支工作
+	git stash apply和git stash drop都可以用来恢复 第一个不会删除stash内容 第二个恢复的同时把stash内容也删除了
+	git stash list 查看隐藏区的内容
+	git remote -v查看远程库信息
+	从本地推送分支到远程，如果推送失败
+		先用git pull抓取远程的新提交
+		发现冲突要处理冲突
+	在本地创建和远程分支对应的分支，使用git checkout -b branch-name origin/branch-name
+	git rebase 可以把处理冲突分支图变成一条执行
+	分支可以移动 标签不可以移动 标签就是一个固定的commit ID用于标识某个版本
+	git tag <name> 打一个标签 默认标签是打在最新提交的commit上的 也可以用commit ID来打标签
+	git tag查看所有标签
+	git shouw <name> 查看标签信息
+	git tag -d <name> 删除某个标签
+	git push origin <tagname> 推送某个标签到远程仓库
+	git push origin --tags 一次性推送所有标签到远程仓库
+	git push origin :refs/tags/<tagname>可以删除一个远程标签
+	可以自定义git配置 使用git config命令 可以起别名 可以忽略特殊文件  更多配置百度
