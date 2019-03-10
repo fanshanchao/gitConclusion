@@ -1,0 +1,18 @@
+在本机上创建仓库：
+	1 创建一个目录
+	2 使用git init命令把这个目录编程Git可以管理的仓库 里面有个.git目录用来跟踪管理版本库的
+在这个仓库上操作
+	git add 文件名 将一个文件添加到暂存区 注意到了暂存区并没有到真正的本地仓库
+	git commit -m"提交注释" 这个时候才是真正将文件添加到了本地仓库
+	git status查看git仓库当前状态
+	git differ 查看当前目录里面的文件和本地仓库的文件有何不同 
+	git log 查看历史记录命令 并且有每个Commit的Commit ID
+	在git中HEAD表示当前版本
+	git reset 用来回退到某个Commit ID的版本
+	git reflog 用来记录你的每一次命令
+	git checkout --文件名 可以丢弃工作区的修改 
+	git reset HEAD 文件名 可以把暂存区的修改撤销掉，重新放回工作区
+	git rm 文件名 再git commit 从本地仓库中删除某个文件
+	git checkout --文件名  这个命令实际就是把本地仓库中最新的版本替换到工作区
+	git push -u origin master 添加master分支到远程仓库中区 第一次使用push加了-u以后 还会把本地的master分支和远程的master分支关联起来 这样在以后的推送或者拉取时就可以简化命令
+	git clone 用于向远程仓库克隆一个仓库
