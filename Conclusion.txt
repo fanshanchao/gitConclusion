@@ -43,4 +43,4 @@
 	git push origin <tagname> 推送某个标签到远程仓库
 	git push origin --tags 一次性推送所有标签到远程仓库
 	git push origin :refs/tags/<tagname>可以删除一个远程标签
-	可以自定义git配置 使用git config命令 可以起别名 可以忽略特殊文件  更多配置百度
+	可以自定义git配置 使用git config命令 可以起别名 可以忽略特殊文件 origin  更多配置百度
