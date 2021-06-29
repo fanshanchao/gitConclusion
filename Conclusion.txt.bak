@@ -1,0 +1,46 @@
+在本机上创建仓库：
+	1 创建一个目录
+	2 使用git init命令把这个目录编程Git可以管理的仓库 里面有个.git目录用来跟踪管理版本库的
+在这个仓库上操作
+	git add 文件名 将一个文件添加到暂存区 注意到了暂存区并没有到真正的本地仓库
+	git commit -m"提交注释" 这个时候才是真正将文件添加到了本地仓库
+	git status查看git仓库当前状态
+	git differ 查看当前目录里面的文件和本地仓库的文件有何不同 
+	git log 查看历史记录命令 并且有每个Commit的Commit ID
+	在git中HEAD表示当前版本
+	git reset 用来回退到某个Commit ID的版本
+	git reflog 用来记录你的每一次命令
+	git checkout --文件名 可以丢弃工作区的修改 
+	git reset HEAD 文件名 可以把暂存区的修改撤销掉，重新放回工作区
+	git rm 文件名 再git commit 从本地仓库中删除某个文件
+	git checkout --文件名  这个命令实际就是把本地仓库中最新的版本替换到工作区
+	git push -u origin master 添加master分支到远程仓库中区 第一次使用push加了-u以后 还会把本地的master分支和远程的master分支关联起来 这样在以后的推送或者拉取时就可以简化命令
+	git clone 用于向远程仓库克隆一个仓库
+	git reflog 查看命令历史 记录历史每一条记录
+	git reset hard-Commit的id  回退到某一版本
+	git checkout -b 分支名 创建并切换到这个分支
+	git branch查看分支
+	git branch <name> 创建分支
+	git checkout <name>切换分支
+	git merge <name> 合并name这个分支到当前分支 注意要是否有合并冲突
+	git branch -d <name>删除分支
+	git merge --no-ff -m"注释" <name> 合并某个分支 并且不会删除这个分支的信息
+	git log还可以用来看分支历史
+	git stash 把当前工作现场储藏起来，可以避免必须要提交才能去其他分支工作
+	git stash apply和git stash drop都可以用来恢复 第一个不会删除stash内容 第二个恢复的同时把stash内容也删除了
+	git stash list 查看隐藏区的内容
+	git remote -v查看远程库信息
+	从本地推送分支到远程，如果推送失败
+		先用git pull抓取远程的新提交
+		发现冲突要处理冲突
+	在本地创建和远程分支对应的分支，使用git checkout -b branch-name origin/branch-name
+	git rebase 可以把处理冲突分支图变成一条执行
+	分支可以移动 标签不可以移动 标签就是一个固定的commit ID用于标识某个版本
+	git tag <name> 打一个标签 默认标签是打在最新提交的commit上的 也可以用commit ID来打标签
+	git tag查看所有标签
+	git shouw <name> 查看标签信息
+	git tag -d <name> 删除某个标签
+	git push origin <tagname> 推送某个标签到远程仓库
+	git push origin --tags 一次性推送所有标签到远程仓库
+	git push origin :refs/tags/<tagname>可以删除一个远程标签
+	可以自定义git配置 使用git config命令 可以起别名 可以忽略特殊文件  更多配置百度
